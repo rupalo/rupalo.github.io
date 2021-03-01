@@ -16,7 +16,7 @@
         $(".button").click(function () {                            //if any button from the ".button" class is clicked      
             var p = $(this).attr('id');                             //get this button id and store it inside the "p" variable.      
             pin: p                                                  //a dictionary contains the button id to get sent to the web server.      
-            $.get("http://192.168.151.14:80/", {                      //then send a get request to the web server"http://192.168.1.4:80/" (":80" means port number 80) with some data in a form of dictionary {pin: p} which is the butoon id. IMPORTANT NOTE: DON'T FORGET TO CHANGE THE IP ADDRESS WITH YOUR ESP8266 NEW IP ADDRESS.      
+            $.get("http://thingIP:80/", {                      //then send a get request to the web server"http://192.168.1.4:80/" (":80" means port number 80) with some data in a form of dictionary {pin: p} which is the butoon id. IMPORTANT NOTE: DON'T FORGET TO CHANGE THE IP ADDRESS WITH YOUR ESP8266 NEW IP ADDRESS.      
             pin: p      
             });      
         });      
