@@ -1,24 +1,15 @@
-<!DOCTYPE html>      
-<html>      
-<head>      
-    <title>Smart Home System</title>      
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
-</head>      
-<body style="background-color: rgb(47,120,157); color: seashell; text-align: center;">      
-    <h1> Smart Home Control Panel</h1>                                     
-    <h4>Arduino ESP8266 Integration WWW TEST </h4>      
-    <img src="dogMeme.jpg" width="680px" height="510px">      
-    <br>      
-    <button style="margin: 10px;" id="071" class="button">LED ON</button>      
-    <br>      
-    <button style="margin: 10px;" id="070" class="button">LED OFF</button>      
-        <script>                                                        //starting Javascript.      
-        $(".button").click(function () {                            //if any button from the ".button" class is clicked      
-            var p = $(this).attr('id');                             //get this button id and store it inside the "p" variable.      
-            pin: p                                                  //a dictionary contains the button id to get sent to the web server.      
-            $.get("some_value", {                      //then send a get request to the web server"http://192.168.1.4:80/" (":80" means port number 80) with some data in a form of dictionary {pin: p} which is the butoon id. IMPORTANT NOTE: DON'T FORGET TO CHANGE THE IP ADDRESS WITH YOUR ESP8266 NEW IP ADDRESS.      
-        });      
-       });      
-    </script>
-</body>      
-</html>      
+<!DOCTYPE html>
+<html>
+<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<link rel=\"icon\" href=\"data:,\">
+	<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} 
+	.button { background-color: #195B6A; border: none; color: white; padding: 16px 40px;
+	text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}  
+	.button2 {background-color: #77878A;}
+	</style>
+</head>
+<body>
+  <h1>ESP8266 Web Server</h1>
+  <p>GPIO 5 - State off </p>
+  <p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>
+</body></html>
