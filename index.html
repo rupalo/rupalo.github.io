@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
- <head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
- <link rel=\"icon\" href=\"data:,\">
-	<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} 
-	.button { background-color: #195B6A; border: none; color: white; padding: 16px 40px;
-	text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}  
-	.button2 {background-color: #77878A;}
-	</style>
+ <head>	
+    <title>Smart Home System</title>      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
  </head>
  <body>
   <h1>ESP8266 Web Server</h1>
   <p>GPIO 5 - State off </p>
-  <p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>
+  <br>
+  <button style="margin: 10px;" id="071" class="button">LAMP ON</button>      
+  <br>  
+  <button style="margin: 10px;" id="070" class="button">LAMP OFF</button>
+  <script>                                                        //starting Javascript.      
+        $(".button").click(function () {                            //if any button from the ".button" class is clicked      
+            var p = $(this).attr('id');                             //get this button id and store it inside the "p" variable.      
+            pin: p                                                  //a dictionary contains the button id to get sent to the web server.      
+            //$.get("http://192.168.151.2:80/", {                      //then send a get request to the web server"http://192.168.1.4:80/" (":80" means port number 80) with some data in a form of dictionary {pin: p} which is the butoon id. IMPORTANT NOTE: DON'T FORGET TO CHANGE THE IP ADDRESS WITH YOUR ESP8266 NEW IP ADDRESS.      
+            //pin: p      
+            //});      
+        });      
+   </script>     
  </body>
 </html>
